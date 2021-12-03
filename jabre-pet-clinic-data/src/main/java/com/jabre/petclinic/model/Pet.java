@@ -3,8 +3,8 @@ package com.jabre.petclinic.model;
 import java.time.LocalDate;
 
 /**
- * @author : Jabre
- * @created : 12/3/2021, Friday
+ * Author : Jabre
+ * Created : 12/3/2021, Friday
  **/
 public class Pet {
 
