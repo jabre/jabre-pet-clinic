@@ -57,6 +57,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/jabre/jabre-pet-clinic.git</developerConnection>
+    <tag>pet-clinic-0.0.1</tag>
   </scm>
 
 
