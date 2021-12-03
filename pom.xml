@@ -11,7 +11,7 @@
 
 	<groupId>com.jabre</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>pet-clinic</name>
 	<description>Jabre Pet Clinic</description>
 	<packaging>pom</packaging>
@@ -57,7 +57,7 @@
 
 	<scm>
 		<developerConnection>scm:git:https://github.com/jabre/jabre-pet-clinic.git</developerConnection>
-	  <tag>HEAD</tag>
+	  <tag>pet-clinic-0.0.1</tag>
   </scm>
 
 
