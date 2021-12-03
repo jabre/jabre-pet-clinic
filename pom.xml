@@ -11,7 +11,7 @@
 
 	<groupId>com.jabre</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.1.SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>pet-clinic</name>
 	<description>Jabre Pet Clinic</description>
 	<packaging>pom</packaging>
