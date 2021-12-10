@@ -1,7 +1,7 @@
 package com.jabre.petclinic.services.map;
 
 import com.jabre.petclinic.model.Vet;
-import com.jabre.petclinic.services.CrudService;
+import com.jabre.petclinic.services.VetService;
 
 import java.util.Set;
 
@@ -9,7 +9,7 @@ import java.util.Set;
  * Author : Jabre
  * Created : 12/5/2021, Sunday
  **/
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
