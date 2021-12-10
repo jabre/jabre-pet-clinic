@@ -2,6 +2,7 @@ package com.jabre.petclinic.services.map;
 
 import com.jabre.petclinic.model.Vet;
 import com.jabre.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -9,6 +10,7 @@ import java.util.Set;
  * Author : Jabre
  * Created : 12/5/2021, Sunday
  **/
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Vet findById(Long id) {
