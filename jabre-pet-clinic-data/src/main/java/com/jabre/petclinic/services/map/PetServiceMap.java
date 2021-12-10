@@ -1,7 +1,8 @@
 package com.jabre.petclinic.services.map;
 
 import com.jabre.petclinic.model.Pet;
-import com.jabre.petclinic.services.CrudService;
+import com.jabre.petclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -9,7 +10,8 @@ import java.util.Set;
  * Author : Jabre
  * Created : 12/5/2021, Sunday
  **/
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Pet findById(Long id) {
         return super.findById(id);
@@ -32,6 +34,6 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements Crud
 
     @Override
     public Pet save(Pet object) {
-        return save(object.getId(), object);
+        return super.save(object);
     }
 }
