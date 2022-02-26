@@ -3,6 +3,8 @@ package com.jabre.petclinic.services.map;
 import com.jabre.petclinic.model.Visit;
 import com.jabre.petclinic.services.SpecialityService;
 import com.jabre.petclinic.services.VisitService;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -10,6 +12,8 @@ import java.util.Set;
  * Author : Jabre
  * Created : 2/26/2022, Saturday
  **/
+@Service
+@Profile({"default", "map"})
 public class VisitServiceMap extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override

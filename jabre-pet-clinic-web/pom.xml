@@ -58,48 +58,48 @@
             <version>${webjars-font-awesome.version}</version>
         </dependency>
         <!-- end of webjars -->
+        <!--
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-devtools</artifactId>
+                    <scope>runtime</scope>
+                    <optional>true</optional>
+                </dependency>
+        -->
+                <dependency>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId>
+                    <optional>true</optional>
+                </dependency>
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-test</artifactId>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.gitlab.haynes</groupId>
+                        <artifactId>libsass-maven-plugin</artifactId>
+                        <version>0.2.26</version>
+                        <executions>
+                            <execution>
+                                <phase>generate-resources</phase>
+                                <?m2e execute onConfiguration,onIncremental?>
+                                <goals>
+                                    <goal>compile</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <inputPath>${basedir}/src/main/scss/</inputPath>
+                            <outputPath>${basedir}/src/main/resources/static/resources/css/</outputPath>
+                            <includePath>${project.build.directory}/webjars/META-INF/resources/webjars/bootstrap/${webjars-bootstrap.version}/scss/</includePath>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.gitlab.haynes</groupId>
-                <artifactId>libsass-maven-plugin</artifactId>
-                <version>0.2.26</version>
-                <executions>
-                    <execution>
-                        <phase>generate-resources</phase>
-                        <?m2e execute onConfiguration,onIncremental?>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <inputPath>${basedir}/src/main/scss/</inputPath>
-                    <outputPath>${basedir}/src/main/resources/static/resources/css/</outputPath>
-                    <includePath>${project.build.directory}/webjars/META-INF/resources/webjars/bootstrap/${webjars-bootstrap.version}/scss/</includePath>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-</project>
+        </project>
