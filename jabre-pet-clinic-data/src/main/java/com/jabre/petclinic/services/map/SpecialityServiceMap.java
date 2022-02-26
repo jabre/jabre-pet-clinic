@@ -2,6 +2,7 @@ package com.jabre.petclinic.services.map;
 
 import com.jabre.petclinic.model.Speciality;
 import com.jabre.petclinic.services.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,6 +12,7 @@ import java.util.Set;
  * Created : 1/4/2022, Tuesday
  **/
 @Service
+@Profile({"default", "map"})
 public class SpecialityServiceMap extends AbstractMapService<Speciality, Long> implements SpecialityService {
 
     @Override
