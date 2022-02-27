@@ -2,6 +2,7 @@ package com.jabre.petclinic.bootstrap;
 
 import com.jabre.petclinic.model.*;
 import com.jabre.petclinic.services.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,7 @@ import java.time.LocalDate;
  * Author : Jabre
  * Created : 12/10/2021, Friday
  **/
+@Slf4j
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -96,7 +98,7 @@ public class DataLoader implements CommandLineRunner {
 
         visitService.save(catVisit);
 
-        System.out.println("Loaded Owners....");
+        log.debug("Loaded Owners....");
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sam");
@@ -112,6 +114,6 @@ public class DataLoader implements CommandLineRunner {
 
         vetService.save(vet2);
 
-        System.out.println("Loaded Vets....");
+        log.debug("Loaded Vets....");
     }
 }
